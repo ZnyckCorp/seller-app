@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Product Details Form</title>
+  <link rel="stylesheet" href="./add.css">
+  <script src="./add.js"></script>
+</head>
+<body>
+
+<div class="container mt-5">
+  <form>
+    <div class="form-group">
+      <label for="productTitle">Product Title (max 100 characters)</label>
+      <input type="text" class="form-control" id="productTitle" placeholder="Enter product title" maxlength="100">
+    </div>
+    
+    <div class="form-group">
+      <label for="productDescription">Product Description (max 1000 characters)</label>
+      <textarea class="form-control" id="productDescription" rows="3" placeholder="Enter product description" maxlength="1000"></textarea>
+    </div>
+    
+    <div class="form-group">
+      <label for="primaryImageUrl">Primary Image URL</label>
+      <input type="text" class="form-control" id="primaryImageUrl" placeholder="Enter primary image URL" oninput="updateImagePreview('primaryImage')">
+      <div id="primaryImagePreview"></div>
+    </div>
+    
+    <div class="form-group">
+      <label for="secondaryImage1Url">Optional Secondary Image 1 URL</label>
+      <input type="text" class="form-control" id="secondaryImage1Url" placeholder="Enter secondary image 1 URL" oninput="updateImagePreview('secondaryImage1')">
+      <div id="secondaryImage1Preview"></div>
+    </div>
+    
+    <div class="form-group">
+      <label for="secondaryImage2Url">Optional Secondary Image 2 URL</label>
+      <input type="text" class="form-control" id="secondaryImage2Url" placeholder="Enter secondary image 2 URL" oninput="updateImagePreview('secondaryImage2')">
+      <div id="secondaryImage2Preview"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Select Category:</label><br>
+      <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input category-checkbox" id="electronics"> Electronics
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input category-checkbox" id="grocery"> Grocery
+      </div>
+      <!-- Add more categories as needed -->
+    </div>
+
+    <div class="form-group">
+      <label for="webhookUrl">Optional Live Stock Webhook URL</label>
+      <input type="text" class="form-control" id="webhookUrl" placeholder="Enter live stock webhook URL">
+    </div>
+    
+    <div class="form-group">
+      <label for="priceWebhookUrl">Optional Live Price Webhook URL</label>
+      <input type="text" class="form-control" id="priceWebhookUrl" placeholder="Enter live price webhook URL">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

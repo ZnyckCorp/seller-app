@@ -1,0 +1,27 @@
+#imagePreview {
+    max-width: 100%;
+    max-height: 200px;
+    margin-bottom: 10px;
+  }
+
+  .full-width-container {
+    width: 100%;
+  }
+
+  .store-details {
+    display: flex;
+    align-items: center;
+  }
+
+  .store-details img {
+    max-width: 150px;
+    max-height: 150px;
+    margin-right: 20px;
+  }
+
+  /* Center the content and add space on the right */
+  .centered-container {
+    display: flex;
+    justify-content: center;
+    margin-right: 20px; /* Adjust the margin as needed */
+  }
