@@ -25,3 +25,10 @@
     justify-content: center;
     margin-right: 20px; /* Adjust the margin as needed */
   }
+
+  .truncated-paragraph {
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+    overflow: hidden; /* Hides any content that exceeds the width of the container */
+    text-overflow: ellipsis; /* Adds ellipsis (...) when content overflows */
+    max-width: 300px; /* Adjust the maximum width of the container as needed */
+  }

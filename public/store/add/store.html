@@ -5,50 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <title>Store Information Form</title>
-  <script src="/store.js"></script>
+  <script src="./store.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
   <nav class="navbar navbar-light bg-light justify-content-between"  style="padding: 1%;">
     <a class="navbar-brand">Seller App</a>
+    <form class="form-inline">
+      <div class="search-nav-bar">
+        <button class="btn btn-outline-success my-2 my-sm-0"  style="margin-left: 10px; min-width: 100px;" onclick="clearFields()"><i class="fas fa-sync-alt"></i> reset fields</button>
+      </div>
+    </form>
   </nav>
 
-<div class="container mt-5">
-  <div id="imagePreview"></div>
-  
+<div class="container mt-5" >  
   <form>
     <div class="form-group">
       <label for="storeName">Store Name (max 100 characters)</label>
-      <input type="text" class="form-control" id="storeName" placeholder="Enter store name" maxlength="100">
+      <input type="text" class="form-control" id="store_name" placeholder="Enter store name" maxlength="100">
     </div>
     
     <div class="form-group">
       <label for="storeDescription">Store Description (max 1000 characters)</label>
-      <textarea class="form-control" id="storeDescription" rows="3" placeholder="Enter store description" maxlength="1000"></textarea>
+      <textarea class="form-control" id="store_description" rows="3" placeholder="Enter store description" maxlength="1000"></textarea>
     </div>
     
     <div class="form-group">
       <label for="latitude">Latitude</label>
-      <input type="text" class="form-control" id="latitude" placeholder="Enter latitude">
+      <input type="text" class="form-control" id="store_lat" placeholder="Enter latitude">
     </div>
 
     <div class="form-group">
       <label for="longitude">Longitude</label>
-      <input type="text" class="form-control" id="longitude" placeholder="Enter longitude">
+      <input type="text" class="form-control" id="store_long" placeholder="Enter longitude">
     </div>
 
     <div class="form-group">
       <label for="storeLocation">Location</label>
-      <input type="text" class="form-control" id="storeLocation" placeholder="Enter location">
+      <input type="text" class="form-control" id="store_location" placeholder="Enter location">
     </div>
     
     <div class="form-group">
       <label for="imageUrl">Image URL</label>
-      <input type="text" class="form-control" id="imageUrl" placeholder="Enter image URL" oninput="updateImagePreview()">
+      <input type="text" class="form-control" id="store_image_url" placeholder="Enter image URL" oninput="updateImagePreview()">
     </div>
     
-    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+  <button onclick="createStore()" id="submit_button" class="btn btn-primary">Submit</button>
+
+
+  <div id="imagePreview" style="margin-top: 10px; max-width: 200px; max-height: 200px; margin: 0 auto; min-width: 100px; min-height: 100px;"></div>
+
 </div>
 
 
